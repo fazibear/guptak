@@ -6,7 +6,6 @@
     <style>
       body {
         background-color: #000;
-        color: #fff;
       }
       #all {
         position: absolute;
@@ -27,12 +26,30 @@
           font-family: verdana;
             font-size: 35px;
       }
+      .speech-bubble {
+	position: relative;
+	background: #ffffff;
+	border-radius: .4em;
+}
+
+.speech-bubble:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 0;
+	border: 33px solid transparent;
+	border-top-color: #ffffff;
+	border-bottom: 0;
+	border-left: 0;
+	margin-left: -16.5px;
+	margin-bottom: -33px;
+}
     </style>
   </head>
   <body>
-    <div id="all">
+      <h2 class="speech-bubble">Nie wiesz za co opier****ć?</h2>
       <h1>🐣</h1>
-      <h2>.guptak.</h2>
-    </div>
   </body>
 </html>
