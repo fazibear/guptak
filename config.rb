@@ -1,3 +1,6 @@
+require 'slim'
+require 'action_view'
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -12,6 +15,7 @@ end
 page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
+page '/*.html', layout: false
 
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
