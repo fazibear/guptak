@@ -16,20 +16,20 @@ html lang="en"
         left: 50%
         transform: translate(-50%, -50%)
 
-      b
+      #guptak
         font-size: 150px
         text-align: center
         display: block
         padding: 0px
         margin: 0px
+        cursor: pointer
 
-      p
+      .speech-bubble
         font-size: 35px
         font-family: verdana
         text-align: center
         padding: 15px
-
-      .speech-bubble
+        margin: 15px
         position: relative
         background: #ffffff
         border-radius: .4em
@@ -48,6 +48,18 @@ html lang="en"
           margin-left: 15px
           margin-bottom: -32px
 
+    javascript:
+      window.addEventListener('load', (event) => {
+
+        document.getElementById('guptak').onclick = () => {
+          var min = 1;
+          var max = #{data.opr.size};
+          var random = Math.floor(Math.random() * (max - min + 1) + min);
+          window.location.href = '/' + random;
+        };
+      });
+
   body
-    p.speech-bubble Nie wiesz za co opier****ć?
-    b 🐣
+    .speech-bubble
+      = locals[:opr] || "Nie wiesz za co opier****ć? Kliknij mnie!"
+    #guptak 🐣
