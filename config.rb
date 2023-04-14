@@ -10,7 +10,7 @@ page '/*.txt', layout: false
 page '/*.html', layout: false
 
 @app.data.opr.each_with_index do |opr, index|
-  proxy "#{index+1}.html", "/index.html", :locals => { :opr => opr }
+  proxy "#{index + 1}.html", '/index.html', locals: { opr: opr }
 end
 
 configure :build do
