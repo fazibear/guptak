@@ -14,11 +14,11 @@ page '/*.html', layout: false
 end
 
 helpers do
-  def text(locals)
+  def icon(locals)
     @app.data.data[locals[:index] || 0].first.first
   end
 
-  def icon(locals)
+  def text(locals)
     @app.data.data[locals[:index] || 0].first.last
   end
 end
