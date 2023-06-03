@@ -16,7 +16,7 @@ html lang="en"
         left: 50%
         transform: translate(-50%, 0%)
 
-      #guptak
+      #icon
         font-size: 150px
         text-align: center
         display: block
@@ -51,9 +51,9 @@ html lang="en"
     javascript:
       window.addEventListener('load', (event) => {
 
-        document.getElementById('guptak').onclick = () => {
+        document.getElementById('icon').onclick = () => {
           var min = 1;
-          var max = #{data.opr.size};
+          var max = #{data.data.length - 1};
           var random = Math.floor(Math.random() * (max - min + 1) + min);
           window.location.href = '/' + random;
         };
@@ -61,5 +61,6 @@ html lang="en"
 
   body
     .speech-bubble
-      = locals[:opr] || "Nie wiesz za co opier****ć? Kliknij mnie!"
-    #guptak 🐣
+      = text(locals)
+    #icon
+      = icon(locals)

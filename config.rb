@@ -9,8 +9,18 @@ page '/*.json', layout: false
 page '/*.txt', layout: false
 page '/*.html', layout: false
 
-@app.data.opr.each_with_index do |opr, index|
-  proxy "#{index + 1}.html", '/index.html', locals: { opr: opr }
+(1...@app.data.data.length).each do |index|
+  proxy "#{index}.html", '/index.html', locals: {index: index}
+end
+
+helpers do
+  def text(locals)
+    @app.data.data[locals[:index] || 0].first.first
+  end
+
+  def icon(locals)
+    @app.data.data[locals[:index] || 0].first.last
+  end
 end
 
 configure :build do
