@@ -1,1 +1,1 @@
-# guptaszek.github.io
+# [guptak.pl](https://guptak.pl)
