@@ -13,8 +13,8 @@ html lang="en"
         background-color: #000
         position: absolute
         bottom: 0%
-        left: 50%
-        transform: translate(-50%, 0%)
+        width: 100%
+        margin: 0
 
       #icon
         font-size: 150px
@@ -23,6 +23,11 @@ html lang="en"
         padding: 0px
         margin: 0px
         cursor: pointer
+
+      .content
+        margin-left: auto
+        margin-right: auto
+        max-width: 800px
 
       .speech-bubble
         font-size: 35px
@@ -60,7 +65,8 @@ html lang="en"
       });
 
   body
-    .speech-bubble
-      = text(locals)
-    #icon
-      = icon(locals)
+    .content
+      .speech-bubble
+        = text(locals)
+      #icon
+        = icon(locals)
